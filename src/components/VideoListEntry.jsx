@@ -1,27 +1,21 @@
 // Import the {Components} module from react
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
+// import React from 'react';
+// import exampleVideoData from './data/exampleVideoData.js';
 
 // Create a VideoListEntry class componenet that extends from React.Component
-class VideoListEntry extends Component {
-  constructor(props) {
-    super(props);
-  }
-  // render the the below HTML into React readable format
-  render() {
-    return (
-      <div className="video-list-entry media">
-        <div className="media-left media-middle">
-          <img className="media-object" src={props.source} alt="" />
-        </div>
-        <div className="media-body">
-          <div className="video-list-entry-title">{props.title}</div>
-          <div className="video-list-entry-detail">{props.description}</div>
-        </div>
-      </div>
-    );
+var VideoListEntry = (props) => (
+  <div className="video-list-entry media">
+    <div className="media-left media-middle">
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
+    </div>
+    <div className="media-body">
+      <div className="video-list-entry-title">{props.video.snippet.title}</div>
+      <div className="video-list-entry-detail">{props.video.snippet.description}</div>
+    </div>
+  </div>
+);
 
-  }
-}
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 VideoListEntry.propTypes = {
