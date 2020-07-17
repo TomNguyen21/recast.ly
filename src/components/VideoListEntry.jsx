@@ -1,7 +1,6 @@
 // Import the {Components} module from react
-// import React, {Component} from 'react';
-// import React from 'react';
-// import exampleVideoData from './data/exampleVideoData.js';
+import React, { Component } from 'react';
+//import exampleVideoData from './data/exampleVideoData.js';
 
 // Create a VideoListEntry class componenet that extends from React.Component
 var VideoListEntry = (props) => (

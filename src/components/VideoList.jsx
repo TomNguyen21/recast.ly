@@ -1,10 +1,10 @@
 // Import the {Components} module from react
-// import React, {Component} from 'react';
+import React, {Component} from 'react';
 // Import VideoListEntry from ./VideoListEntry.jsx
-import VideoListEntry from './VideoListEntry.js';
+// import VideoListEntry from './VideoListEntry.js';
 
 // Create a VideoList class componenet that extends from React.Component
-var VideoList = (props) => (
+let VideoList = (props) => (
   // render the the below HTML into React readable format
   <div className="video-list">
     {props.videos.map( (video) =>
